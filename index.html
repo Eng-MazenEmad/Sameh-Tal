@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Mazen Emad Abdelsattar">
     <title>Sameh Tal | Catalog</title>
     <!---Webpage Icon--->
-    <link rel="Restaurant ICON" href="img/sameh tal Logo.svg">
+    <link rel="Restaurant ICON" href="img/Sameh_Tal_3D.png">
     <!---Stylesheet {to style our page}--->
     <link rel="stylesheet" href="style.css">
     <!---Font Awesome {to use special icons in webpage}--->
@@ -16,7 +17,7 @@
 <!------------------------------Resturant Header-------------------------------------->
 <header>
     <img class="basmalla" src="img/basmalla.svg" alt="Restaurant logo" width="450px">
-    <img class="Logo" src="img/sameh tal Logo.svg" alt="Restaurant logo" height="380px">
+    <img class="Logo" src="img/Sameh_Tal_3D.png" alt="Restaurant logo" height="425px">
     <h1 class="Follow">تواصلوا معنا</h1>
     <div class="head">
         <ul class="headicons">
@@ -28,9 +29,9 @@
     <a href="#Scroll"><i  id="Scroll" class="fa-regular fa-circle-down fa-bounce "></i></a>
 </header>
 
+
 <!------------------------------The main Resturant Menu-------------------------------------->
 <body>
-
 <h1 class="category"><i class="fa-solid fa-cog fa-spin"></i> Our Catalog <i class="fa-solid fa-cog fa-spin"></i></h1>
 
 <div class="category-cards">
@@ -43,14 +44,42 @@
     <a href="Category3/cat3.html" target="_blank" class="category-card">
         <img src="img/cat3.png" alt="Category 3">
     </a>
-    <a href="../Category4/cat4.html" target="_blank" class="category-card">
+    <a href="Category4/cat4.html" target="_blank" class="category-card">
         <img src="img/cat4.png" alt="Category 4">
     </a>
 </div>
 
 
 
+<button id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up-long fa-xs"></i></button>
+<script>
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+const rootElement = document.documentElement;
+
+function handleScroll() {
+  // Show button when user scrolls down 100px
+  if (rootElement.scrollTop > 100) {
+    scrollToTopBtn.classList.add("show");
+  } else {
+    scrollToTopBtn.classList.remove("show");
+  }
+}
+
+function scrollToTop() {
+  // Smooth scroll to top
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+// Event listeners
+scrollToTopBtn.addEventListener("click", scrollToTop);
+document.addEventListener("scroll", handleScroll);
+</script>
 </body>
+
+
 
 
 <!------------------------------Footer-------------------------------------->
@@ -64,7 +93,7 @@
     <!-----------Upper Footer Container----------->
     <div class="footercontainer">
         <!----------- 1st Part {MeCoders Logo}-------->
-        <img id="footerlogo" src="img/MeCoders new.svg" alt="Logo">
+        <img id="footerlogo" src="../Home Page/img/MeCoders new.svg" alt="Logo">
         <!----------- 2nd Part {Contact Us}-------->
         <div id="footercontact" class="footer-content">
             <h3>Contact Us</h3>
