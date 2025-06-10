@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Mazen Emad Abdelsattar">
     <title>Sameh Tal | Windows</title>
     <!---Webpage Icon--->
-    <link rel="Restaurant ICON" href="../Home Page/img/sameh tal Logo.svg">
+    <link rel="Sameh Tal ICON" href="img/Sameh_Tal_3D.png">
     <!---Stylesheet {to style our page}--->
     <link rel="stylesheet" href="cat3.css">
     <!---Font Awesome {to use special icons in webpage}--->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 
 
 <!------------------------------The main Resturant Menu-------------------------------------->
@@ -55,16 +54,38 @@
         <img class="category-card" src="../Category3/img/windows/31.jpg" alt="image">
         <img class="category-card" src="../Category3/img/windows/32.jpg" alt="image">
         <img class="category-card" src="../Category3/img/windows/33.jpg" alt="image">
-
-
-
-
-
     </div>
 
 
+<a href="index.html" id="homeButton" title="Go to Home"><i class="fa-solid fa-house-chimney fa-xs"></i> Home</a>
+<button id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up-long fa-xs"></i></button>
+<script>
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+const rootElement = document.documentElement;
 
+function handleScroll() {
+  // Show button when user scrolls down 100px
+  if (rootElement.scrollTop > 100) {
+    scrollToTopBtn.classList.add("show");
+  } else {
+    scrollToTopBtn.classList.remove("show");
+  }
+}
+
+function scrollToTop() {
+  // Smooth scroll to top
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+// Event listeners
+scrollToTopBtn.addEventListener("click", scrollToTop);
+document.addEventListener("scroll", handleScroll);
+</script>
 </body>
+
 
 
 <!------------------------------Footer-------------------------------------->
@@ -80,7 +101,7 @@
     <!-----------Upper Footer Container----------->
     <div class="footercontainer">
         <!----------- 1st Part {MeCoders Logo}-------->
-        <img id="footerlogo" src="../Home Page/img/MeCoders new.svg" alt="Logo">
+        <img id="footerlogo" src="img/MeCoders new.svg" alt="Logo">
         <!----------- 2nd Part {Contact Us}-------->
         <div id="footercontact" class="footer-content">
             <h3>Contact Us</h3>
@@ -91,14 +112,11 @@
         <div id="footerfollow" class="footer-content">
             <h3>Follow Us</h3>
             <ul class="social-icons">
-                <li><a href="" target="_blank"><i class="fa-brands fa-linkedin fa-3x fa-fade"></i></a></li>
-                <li class="github"><a href="https://github.com/MazenEmadAbdelsattar" target="_blank"><i
-                            class="fa-brands fa-github fa-3x fa-fade"></i></a></li>
-                <li><a href="https://www.facebook.com/profile.php?id=100052692786291" target="_blank"><i
-                            class="fa-brands fa-facebook fa-3x fa-fade"></i></a></li>
-                <li class="instagram"><a href="https://www.instagram.com/iammazenemad" target="_blank"><i
-                            class="fa-brands fa-instagram fa-3x fa-fade"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fa-brands fa-twitter fa-3x fa-fade"></i></a></li>
+                <li><a href="https://wa.me/201146511702" target="_blank"><i class="fa-brands fa-whatsapp fa-3x fa-fade"></i></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100052692786291" target="_blank"><i class="fa-brands fa-facebook fa-3x fa-fade"></i></a></li>
+                <li><a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BpLlKrpl9T7aVqEsNTJE6zA%3D%3D" target="_blank"><i class="fa-brands fa-linkedin fa-3x fa-fade"></i></a></li>
+                <li><a href="https://www.tiktok.com/@iammazenemad" target="_blank"><i class="fa-brands fa-tiktok fa-3x fa-fade"></i></a></li>
+                <li class="instagram"><a href="https://www.instagram.com/iammazenemad" target="_blank"><i class="fa-brands fa-instagram fa-3x fa-fade" ></i></a></li>
             </ul>
         </div>
     </div>
