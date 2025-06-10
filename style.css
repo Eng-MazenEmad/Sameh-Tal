@@ -294,8 +294,8 @@ footer h3 {
   letter-spacing: 1px;
 }
 
-/* Responsive Adjustments */
-@media only screen and (max-width: 1000px) {
+/* Tablet Responsive Adjustments (600px - 1024px) */
+@media only screen and (max-width: 1024px) {
   .footercontainer {
     flex-direction: column;
     height: auto;
@@ -305,14 +305,34 @@ footer h3 {
   .footer-content {
     width: 100%;
     margin-bottom: 2rem;
+    text-align: center;
   }
+  
   #footerfollow {
     width: 100%;
     margin-bottom: 0rem;
+    text-align: center;
   }
+  
   #footerlogo {
     height: 15rem;
     transform: translate(-0.5rem,0);
   }
 }
 
+/* Mobile Responsive Adjustments (below 600px) */
+@media only screen and (max-width: 600px) {
+  .footercontainer {
+    padding: 1rem;
+  }
+  
+  .footer-content {
+    margin-bottom: 1.5rem;
+  }
+  
+  #footerlogo {
+    height: 14rem;
+    transform: none;
+  }
+  
+}
