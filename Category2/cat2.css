@@ -1,15 +1,19 @@
+/*---------To Use External Fonts-----------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 * {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
-}
+  font-family: 'Poppins', serif;
 
+}
 body {
+  margin-top: 3rem;
   width: 100%;
   overflow-x: hidden;
   color: #f8f8f8;
-  background-color: #ffe5c9; /* Keeping this as the base color */
+  background-color: #FFF8F0; /* Keeping this as the base color */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,96 +22,21 @@ body {
 
 }
 
-/*-------------------------------------Home Part Styling------------------------------------*/
-.basmalla{
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.Logo {
-  transform: translateY(1rem);
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
-}
-
-/* Animation Enhancements */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
-
-.Logo {
-  animation: float 4s ease-in-out infinite;
-}
-
-header {
-  background-image: linear-gradient(#ffe5c9, #4b3434); /* Dark blue gradient */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-header {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  border-bottom: 2px solid rgba(214, 40, 40, 0.3); /* Matching red */
-  /* margin-bottom: -1.59rem; */
-}
-
-header a {
-  font-weight: bold;
-  width: 205px;
-  margin: auto;
-  padding: 2px;
-  color: #f8f8f8;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.Follow {
-  color: #d62828; /* Matching red */
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-/*------Social Media & The Arrow------*/
-.headicons,
-#Scroll {
-  cursor: pointer;
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 1rem;
-}
-
-.headicons a:hover {
-  color: #d62828; /* Matching red */
-  transform: translateY(-3px);
-}
-
-#Scroll {
-  font-size: 4rem;
-  margin-top: 1.5rem;
-  color: #d62828; /* Matching red */
-  transition: all 0.4s ease;
-}
-/*-----------------------------------------------------------------------------------------*/
-
 /*-------------------------------------------Categories Styling-----------------------------*/
 .category {
   margin: 20px 0px;
   border-radius: 1.5rem;
-  padding: 1.5rem;
+  padding: 1rem;
   font-size: 2rem;
-  color: #e0f0ff;
+  color: #FFF8F0; /* Ivory */
   text-align: left;
-  background-color: #410303;
-  border: 0.1px solid #700202;
+  background: linear-gradient(135deg, #AE6039 0%, #582F1D 100%); /* Terracotta to brown */
+  border: 2px solid #E8C8A0; /* Gold-beige border */
+  box-shadow: 0 6px 20px rgba(174, 96, 57, 0.2);
 }
-
+.category i {
+  color: #E8C8A0; /* Gold-beige icons */
+}
 .cats{
   display: flex;
   justify-content: center;
@@ -157,19 +86,67 @@ header a {
 }
 
 /*-----------------------------------------------------------------------------------------*/
+/*------------------------Home Page Btn---------------------*/
+#homeButton {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-image: linear-gradient(-45deg,#ec7f01, #7a3614); /* Ivory to terracotta gradient */
+  color: white;
+  text-decoration: none; /* Removes underline */
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  /* Optional: Add a subtle animation on hover */
+  transform: scale(1);
+}
+#homeButton:hover {
+  background-image: linear-gradient(45deg,#ec7f01, #a04011); /* Ivory to terracotta gradient */
+  color: black;
+  transform: scale(1.05); /* Slightly enlarges on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+/*------------------------Scroll Up Btn---------------------*/
 
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: linear-gradient(-45deg,#ec7f01, #7a3614); /* Ivory to terracotta gradient */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 999;
+}
+#scrollToTopBtn:hover {
+  color: black;
+  background-image: linear-gradient(45deg,#ec7f01, #7a3614); /* Ivory to terracotta gradient */
+}
+#scrollToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
 /*------------------------Footer Styling---------------------*/
 footer {
   overflow-x: hidden;
-  background: #4b3434; /* Dark blue */
-  background-image: linear-gradient(#4b3434, #140202);
+  background: linear-gradient(to bottom, #582F1D 0%, #321A0F 100%); /* Deep brown gradient */
   width: 100%;
   position: relative;
 }
 
 /*------------------------Footer Curved BG Styling---------------------*/
 .custom-shape-divider-top .shape-fill {
-  fill: #ffe5c9;
+  fill: #FFF8F0; /* Ivory to match body */
 }
 
 /*------------------------Upper Footer Styling-----------------*/
@@ -187,9 +164,11 @@ footer {
 
 footer h3 {
   font-size: 28px;
-  color: #d62828; /* Matching red */
+  color: #E8C8A0; /* Gold-beige */
   margin-bottom: 15px;
   text-align: center;
+    text-shadow: 1px 1px 2px rgba(50, 26, 15, 0.3);
+
 }
 
 #footercontact{
@@ -221,7 +200,7 @@ footer h3 {
 }
 
 .footer-content a:hover {
-  color: #d62828; /* Matching red */
+  color: #df5f1f; /* Terracotta */
   transform: translateX(5px);
 }
 
@@ -252,11 +231,13 @@ footer h3 {
 
 /*---------------------Lower Footer Styling-----------------*/
 .bottom-bar {
-  background: #1402020c;
+  background: rgba(50, 26, 15, 0.9); /* Darkest brown */
   text-align: center;
   padding: 1rem 0;
   margin-top: 20px;
   font-weight: 500;
+    border-top: 1px solid #ae603977;
+
 }
 
 .bottom-bar p {
@@ -266,8 +247,9 @@ footer h3 {
   letter-spacing: 1px;
 }
 
-/* Responsive Adjustments */
-@media only screen and (max-width: 768px) {
+
+/* Tablet Responsive Adjustments (600px - 1024px) */
+@media only screen and (max-width: 1024px) {
   .footercontainer {
     flex-direction: column;
     height: auto;
@@ -277,13 +259,34 @@ footer h3 {
   .footer-content {
     width: 100%;
     margin-bottom: 2rem;
+    text-align: center;
   }
+  
   #footerfollow {
     width: 100%;
     margin-bottom: 0rem;
+    text-align: center;
   }
+  
   #footerlogo {
     height: 15rem;
     transform: translate(-0.5rem,0);
   }
+}
+
+/* Mobile Responsive Adjustments (below 600px) */
+@media only screen and (max-width: 600px) {
+  .footercontainer {
+    padding: 1rem;
+  }
+  
+  .footer-content {
+    margin-bottom: 1.5rem;
+  }
+  
+  #footerlogo {
+    height: 15rem;
+    transform: none;
+  }
+  
 }
